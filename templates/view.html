@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-Only Website</title>
+    <style>
+        @font-face {
+            font-family: 'EenaduU';
+            src: url(https://assets.eenadu.net/_assets/UniFont/EenaduLightUni.eot);
+            src: local('☺'),
+            url(https://assets.eenadu.net/_assets/UniFont/EenaduLightUni.woff2) format('woff2'),
+            url(https://assets.eenadu.net/_assets/UniFont/EenaduLightUni.woff) format('woff'),
+            url(https://assets.eenadu.net/_assets/UniFont/EenaduLightUni.ttf) format('truetype'),
+            url(https://assets.eenadu.net/_assets/UniFont/EenaduLightUni.svg) format('svg');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'EenaduUH';
+            src: url(https://assets.eenadu.net/_assets/UniFont/NarmadaUni.eot);
+            src: local('☺'),
+            url(https://assets.eenadu.net/_assets/UniFont/NarmadaUni.woff2) format('woff2'),
+            url(https://assets.eenadu.net/_assets/UniFont/NarmadaUni.woff) format('woff'),
+            url(https://assets.eenadu.net/_assets/UniFont/NarmadaUni.ttf) format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        /* Include the rest of the provided CSS classes */
+        /* ... (other CSS classes) ... */
+        .telugu_uni_body {
+            font-family: EenaduU;
+            font-size: 26px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+        /* Additional styles for centering and improving readability */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .content-container {
+            max-width: 800px; /* Limit the width for better readability */
+            text-align: left;
+            white-space: pre-wrap; /* Preserve line breaks */
+        }
+    </style>
+</head>
+<body>
+<div class="content-container telugu_uni_body">
+    {{ text_content|safe }}
+    <a href="{{ url_for('index') }}">Back to Links</a>
+</div>
+</body>
+</html>
+
